@@ -1,0 +1,24 @@
+{
+  "name": "Polite Reviewer",
+  "description": "Replace negative words with positive words in your code review.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "main.html",
+    "default_icon": "icon.png"
+  },
+  "host_permissions": [
+    "https://api.openai.com/*"
+  ],
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

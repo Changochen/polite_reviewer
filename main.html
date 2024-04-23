@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport">
+  <title>Extension Popup</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            padding: 0;
+            min-width: 300px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        textarea {
+            width: calc(100% - 20px); /* Full width minus padding */
+            height: 100px; /* Fixed height */
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box; /* Include padding and border in the width */
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: none; /* Disable resizing */
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #response {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+  <h1>Polite Reviewer</h1>
+  <textarea id="prompt" placeholder="Enter your prompt here"></textarea>
+  <button id="send">Rephrase</button>
+  <div id="response"></div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
